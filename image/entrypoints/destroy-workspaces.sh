@@ -16,10 +16,11 @@ init-backend
 
 cd "$INPUT_PATH"
 
+echo $PLAN_ARGS
 for workspace in $(terraform workspace list|sed 's/*//g');
   do
     if [[ $workspace = PR* ]]
     then
-      terraform workspace delete $workspace
+      echo $workspace
     fi
   done
