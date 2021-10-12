@@ -2,13 +2,13 @@
 
 # shellcheck source=../actions.sh
 source /usr/local/actions.sh
-
+echo "test1"
 debug
 setup
 init-backend
 select-workspace
 set-plan-args
-
+echo "test3"
 # We can't delete an active workspace, so re-initialize with a 'default' workspace (which may not exist)
 workspace=$INPUT_WORKSPACE
 INPUT_WORKSPACE=default
