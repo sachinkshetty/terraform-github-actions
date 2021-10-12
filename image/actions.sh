@@ -207,6 +207,7 @@ function set-plan-args() {
     fi
 
     if [[ -n "$INPUT_VARIABLES" ]]; then
+        echo $INPUT_VARIABLES
         echo "$INPUT_VARIABLES" >"$STEP_TMP_DIR/variables.tfvars"
         PLAN_ARGS="$PLAN_ARGS -var-file=$STEP_TMP_DIR/variables.tfvars"
     fi
