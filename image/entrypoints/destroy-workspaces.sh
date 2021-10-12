@@ -4,19 +4,23 @@
 source /usr/local/actions.sh
 echo "test1"
 debug
+echo "test2"
 setup
-init-backend
-select-workspace
-set-plan-args
 echo "test3"
+init-backend
+echo "test4"
+select-workspace
+echo "test5"
+set-plan-args
+echo "test6"
 # We can't delete an active workspace, so re-initialize with a 'default' workspace (which may not exist)
 workspace=$INPUT_WORKSPACE
 INPUT_WORKSPACE=default
 init-backend
 
-echo "test1"
+echo "test7"
 cd "$INPUT_PATH"
-echo "test2"
+echo "test8"
 
 echo $PLAN_ARGS
 for workspace in $(terraform workspace list|sed 's/*//g');
