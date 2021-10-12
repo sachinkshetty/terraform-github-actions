@@ -12,11 +12,10 @@ workspace=$INPUT_WORKSPACE
 INPUT_WORKSPACE=default
 init-backend
 
-echo "test7"
 cd "$INPUT_PATH"
-echo "test8"
 
 echo $PLAN_ARGS
+echo $variables
 for workspace in $(terraform workspace list|sed 's/*//g');
   do
     if [[ $workspace = PR* ]]
