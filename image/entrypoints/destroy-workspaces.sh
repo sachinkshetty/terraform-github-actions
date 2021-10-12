@@ -14,7 +14,9 @@ workspace=$INPUT_WORKSPACE
 INPUT_WORKSPACE=default
 init-backend
 
+echo "test1"
 cd "$INPUT_PATH"
+echo "test2"
 
 echo $PLAN_ARGS
 for workspace in $(terraform workspace list|sed 's/*//g');
