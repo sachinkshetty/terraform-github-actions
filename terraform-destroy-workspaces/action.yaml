@@ -34,7 +34,7 @@ inputs:
 runs:
   using: docker
   image: ../image/Dockerfile
-  entrypoint: /entrypoints/destroy-workspace.sh
+  entrypoint: /entrypoints/destroy-workspaces.sh
 
 branding:
   icon: globe
