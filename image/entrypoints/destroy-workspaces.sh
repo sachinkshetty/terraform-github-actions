@@ -15,9 +15,8 @@ init-backend
 cd "$INPUT_PATH"
 for workspace in $(terraform workspace list|sed 's/*//g');
   do
-    echo $workspace
-#    if [[ $workspace = PR* ]]
-#    then
-#      echo $workspace
-#    fi
+    if [[ $workspace = PR* ]]
+    then
+      echo $workspace
+    fi
   done
