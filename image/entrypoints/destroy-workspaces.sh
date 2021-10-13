@@ -15,7 +15,6 @@ init-backend
 cd "$INPUT_PATH"
 
 echo $PLAN_ARGS
-echo $variables
 for workspace in $(terraform workspace list|sed 's/*//g');
   do
     if [[ $workspace = PR* ]]
